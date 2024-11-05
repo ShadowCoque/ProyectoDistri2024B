@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace clienteInterfaz
 {
-    public partial class Form1 : Form
+    public partial class flpTitulo : Form
     {
-        public Form1()
+        public flpTitulo()
         {
             InitializeComponent();
         }

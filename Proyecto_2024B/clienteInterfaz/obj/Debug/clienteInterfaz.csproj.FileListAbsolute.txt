@@ -1,0 +1,10 @@
+D:\USUARIO\Documentos\Docs_Dennis\2024B\Aplicaciones Distribuidas\Programas\ProyectoDistri2024B\Proyecto_2024B\clienteInterfaz\bin\Debug\clienteInterfaz.exe.config
+D:\USUARIO\Documentos\Docs_Dennis\2024B\Aplicaciones Distribuidas\Programas\ProyectoDistri2024B\Proyecto_2024B\clienteInterfaz\bin\Debug\clienteInterfaz.exe
+D:\USUARIO\Documentos\Docs_Dennis\2024B\Aplicaciones Distribuidas\Programas\ProyectoDistri2024B\Proyecto_2024B\clienteInterfaz\bin\Debug\clienteInterfaz.pdb
+D:\USUARIO\Documentos\Docs_Dennis\2024B\Aplicaciones Distribuidas\Programas\ProyectoDistri2024B\Proyecto_2024B\clienteInterfaz\obj\Debug\clienteInterfaz.csproj.AssemblyReference.cache
+D:\USUARIO\Documentos\Docs_Dennis\2024B\Aplicaciones Distribuidas\Programas\ProyectoDistri2024B\Proyecto_2024B\clienteInterfaz\obj\Debug\clienteInterfaz.flpTitulo.resources
+D:\USUARIO\Documentos\Docs_Dennis\2024B\Aplicaciones Distribuidas\Programas\ProyectoDistri2024B\Proyecto_2024B\clienteInterfaz\obj\Debug\clienteInterfaz.Properties.Resources.resources
+D:\USUARIO\Documentos\Docs_Dennis\2024B\Aplicaciones Distribuidas\Programas\ProyectoDistri2024B\Proyecto_2024B\clienteInterfaz\obj\Debug\clienteInterfaz.csproj.GenerateResource.cache
+D:\USUARIO\Documentos\Docs_Dennis\2024B\Aplicaciones Distribuidas\Programas\ProyectoDistri2024B\Proyecto_2024B\clienteInterfaz\obj\Debug\clienteInterfaz.csproj.CoreCompileInputs.cache
+D:\USUARIO\Documentos\Docs_Dennis\2024B\Aplicaciones Distribuidas\Programas\ProyectoDistri2024B\Proyecto_2024B\clienteInterfaz\obj\Debug\clienteInterfaz.exe
+D:\USUARIO\Documentos\Docs_Dennis\2024B\Aplicaciones Distribuidas\Programas\ProyectoDistri2024B\Proyecto_2024B\clienteInterfaz\obj\Debug\clienteInterfaz.pdb
