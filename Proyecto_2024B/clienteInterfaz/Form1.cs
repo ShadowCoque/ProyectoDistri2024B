@@ -77,17 +77,21 @@ namespace clienteInterfaz
 
         private void btnConsulta_Click(object sender, EventArgs e)
         {
-            pnlContenido.BringToFront();
+            pnlBusqueda.SendToBack();
+            pnlTengoLuz.SendToBack();
+            pnlConsulta.BringToFront();
         }
 
         private void btnBusqueda_Click(object sender, EventArgs e)
         {
-            pnlContenido.BringToFront();
+            pnlBusqueda.BringToFront();
         }
 
         private void btnTengoLuz_Click(object sender, EventArgs e)
         {
-            pnlContenido.BringToFront();
+            pnlBusqueda.SendToBack();
+            pnlBusqueda.SendToBack();
+            pnlTengoLuz.BringToFront();
         }
     }
 }
