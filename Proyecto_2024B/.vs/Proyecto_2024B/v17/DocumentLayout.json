@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Sebas\\Documents\\7mo semestre FINAL\\Distri\\ProyectoDistri2024B\\Proyecto_2024B\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2785B2D3-28C1-43D1-AADA-6589EDF159B3}|clienteInterfaz\\clienteInterfaz.csproj|C:\\Users\\Sebas\\Documents\\7mo semestre FINAL\\Distri\\ProyectoDistri2024B\\Proyecto_2024B\\clienteinterfaz\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2785B2D3-28C1-43D1-AADA-6589EDF159B3}|clienteInterfaz\\clienteInterfaz.csproj|solutionrelative:clienteinterfaz\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2785B2D3-28C1-43D1-AADA-6589EDF159B3}|clienteInterfaz\\clienteInterfaz.csproj|c:\\users\\sebas\\documents\\7mo semestre final\\distri\\proyectodistri2024b\\proyecto_2024b\\clienteinterfaz\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{2785B2D3-28C1-43D1-AADA-6589EDF159B3}|clienteInterfaz\\clienteInterfaz.csproj|solutionrelative:clienteinterfaz\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2785B2D3-28C1-43D1-AADA-6589EDF159B3}|clienteInterfaz\\clienteInterfaz.csproj|C:\\Users\\Sebas\\Documents\\7mo semestre FINAL\\Distri\\ProyectoDistri2024B\\Proyecto_2024B\\clienteinterfaz\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2785B2D3-28C1-43D1-AADA-6589EDF159B3}|clienteInterfaz\\clienteInterfaz.csproj|solutionrelative:clienteinterfaz\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2785B2D3-28C1-43D1-AADA-6589EDF159B3}|clienteInterfaz\\clienteInterfaz.csproj|C:\\Users\\Sebas\\Documents\\7mo semestre FINAL\\Distri\\ProyectoDistri2024B\\Proyecto_2024B\\clienteinterfaz\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
@@ -36,20 +36,20 @@
               "RelativeDocumentMoniker": "clienteInterfaz\\Form1.Designer.cs",
               "ToolTip": "C:\\Users\\Sebas\\Documents\\7mo semestre FINAL\\Distri\\ProyectoDistri2024B\\Proyecto_2024B\\clienteInterfaz\\Form1.Designer.cs",
               "RelativeToolTip": "clienteInterfaz\\Form1.Designer.cs",
-              "ViewState": "AgIAAHsAAAAAAAAAAAAAwKgAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAAwNcAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-08T01:04:38.272Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\Sebas\\Documents\\7mo semestre FINAL\\Distri\\ProyectoDistri2024B\\Proyecto_2024B\\clienteInterfaz\\Form1.cs",
               "RelativeDocumentMoniker": "clienteInterfaz\\Form1.cs",
               "ToolTip": "C:\\Users\\Sebas\\Documents\\7mo semestre FINAL\\Distri\\ProyectoDistri2024B\\Proyecto_2024B\\clienteInterfaz\\Form1.cs",
               "RelativeToolTip": "clienteInterfaz\\Form1.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAawFcAAABEAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-05T02:54:07.037Z",
               "EditorCaption": ""
@@ -69,7 +69,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Form1.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Sebas\\Documents\\7mo semestre FINAL\\Distri\\ProyectoDistri2024B\\Proyecto_2024B\\clienteInterfaz\\Form1.cs",
               "RelativeDocumentMoniker": "clienteInterfaz\\Form1.cs",

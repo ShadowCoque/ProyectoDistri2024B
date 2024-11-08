@@ -37,7 +37,12 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.flpContenido = new System.Windows.Forms.FlowLayoutPanel();
             this.flpLogo = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnlContenido = new System.Windows.Forms.Panel();
+            this.lblIndicacion = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.flpBarraLateral.SuspendLayout();
+            this.pnlContenido.SuspendLayout();
             this.SuspendLayout();
             // 
             // flpBarraLateral
@@ -151,12 +156,54 @@
             this.flpLogo.Paint += new System.Windows.Forms.PaintEventHandler(this.flpLogo_Paint);
             this.flpLogo.MouseEnter += new System.EventHandler(this.flpLogo_MouseEnter);
             // 
+            // pnlContenido
+            // 
+            this.pnlContenido.BackColor = System.Drawing.Color.White;
+            this.pnlContenido.Controls.Add(this.btnBuscar);
+            this.pnlContenido.Controls.Add(this.textBox1);
+            this.pnlContenido.Controls.Add(this.lblIndicacion);
+            this.pnlContenido.Location = new System.Drawing.Point(277, 139);
+            this.pnlContenido.Name = "pnlContenido";
+            this.pnlContenido.Size = new System.Drawing.Size(943, 492);
+            this.pnlContenido.TabIndex = 0;
+            // 
+            // lblIndicacion
+            // 
+            this.lblIndicacion.AutoSize = true;
+            this.lblIndicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIndicacion.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblIndicacion.Location = new System.Drawing.Point(53, 37);
+            this.lblIndicacion.Name = "lblIndicacion";
+            this.lblIndicacion.Size = new System.Drawing.Size(278, 32);
+            this.lblIndicacion.TabIndex = 1;
+            this.lblIndicacion.Text = "Ingrese su estación";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.Honeydew;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(59, 86);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(828, 27);
+            this.textBox1.TabIndex = 2;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(394, 140);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(144, 47);
+            this.btnBuscar.TabIndex = 3;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            // 
             // frmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(1232, 634);
+            this.Controls.Add(this.pnlContenido);
             this.Controls.Add(this.flpContenido);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.flpLogo);
@@ -169,6 +216,8 @@
             this.Load += new System.EventHandler(this.frmCliente_Load);
             this.flpBarraLateral.ResumeLayout(false);
             this.flpBarraLateral.PerformLayout();
+            this.pnlContenido.ResumeLayout(false);
+            this.pnlContenido.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,6 +233,10 @@
         private System.Windows.Forms.Button btnTengoLuz;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.FlowLayoutPanel flpContenido;
+        private System.Windows.Forms.Panel pnlContenido;
+        private System.Windows.Forms.Label lblIndicacion;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }
 

@@ -21,6 +21,7 @@ namespace clienteInterfaz
 
         private void frmCliente_Load(object sender, EventArgs e)
         {
+            flpContenido.BringToFront();
         }
 
         private void flpLogo_Paint(object sender, PaintEventArgs e)
@@ -56,12 +57,13 @@ namespace clienteInterfaz
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
-            flpContenido.BackgroundImage = null;
+            flpContenido.BringToFront();
         }
 
         private void flpLogo_Click(object sender, EventArgs e)
         {
-            flpContenido.BackgroundImage = Resources.cronograma_img;
+            flpContenido.BringToFront();
+
         }
 
         private void flpLogo_MouseEnter(object sender, EventArgs e)
@@ -75,17 +77,17 @@ namespace clienteInterfaz
 
         private void btnConsulta_Click(object sender, EventArgs e)
         {
-            flpContenido.BackgroundImage = Resources.cronograma_img;
+            pnlContenido.BringToFront();
         }
 
         private void btnBusqueda_Click(object sender, EventArgs e)
         {
-            flpContenido.BackgroundImage = Resources.cronograma_img;
+            pnlContenido.BringToFront();
         }
 
         private void btnTengoLuz_Click(object sender, EventArgs e)
         {
-            flpContenido.BackgroundImage = Resources.cronograma_img;
+            pnlContenido.BringToFront();
         }
     }
 }
