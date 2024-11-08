@@ -1,4 +1,5 @@
-﻿using System;
+﻿using clienteInterfaz.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -51,6 +52,40 @@ namespace clienteInterfaz
                 // Dibujar la línea en el borde derecho
                 e.Graphics.DrawLine(pen, flpBarraLateral.Width - 1, 0, flpBarraLateral.Width - 1, flpBarraLateral.Height);
             }
+        }
+
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+            flpContenido.BackgroundImage = null;
+        }
+
+        private void flpLogo_Click(object sender, EventArgs e)
+        {
+            flpContenido.BackgroundImage = Resources.cronograma_img;
+        }
+
+        private void flpLogo_MouseEnter(object sender, EventArgs e)
+        {
+            flpLogo.Cursor = Cursors.Hand;
+        }
+        private void flpLogo_MouseLeave(object sender, EventArgs e)
+        {
+            flpLogo.Cursor = Cursors.Default;
+        }
+
+        private void btnConsulta_Click(object sender, EventArgs e)
+        {
+            flpContenido.BackgroundImage = Resources.cronograma_img;
+        }
+
+        private void btnBusqueda_Click(object sender, EventArgs e)
+        {
+            flpContenido.BackgroundImage = Resources.cronograma_img;
+        }
+
+        private void btnTengoLuz_Click(object sender, EventArgs e)
+        {
+            flpContenido.BackgroundImage = Resources.cronograma_img;
         }
     }
 }

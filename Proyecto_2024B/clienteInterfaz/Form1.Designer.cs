@@ -67,6 +67,7 @@
             this.btnInicio.TabIndex = 3;
             this.btnInicio.Text = "Inicio";
             this.btnInicio.UseVisualStyleBackColor = true;
+            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
             // btnConsulta
             // 
@@ -81,6 +82,7 @@
             this.btnConsulta.TabIndex = 4;
             this.btnConsulta.Text = "Consulta";
             this.btnConsulta.UseVisualStyleBackColor = true;
+            this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
             // 
             // btnBusqueda
             // 
@@ -95,6 +97,7 @@
             this.btnBusqueda.TabIndex = 5;
             this.btnBusqueda.Text = "Búsqueda";
             this.btnBusqueda.UseVisualStyleBackColor = true;
+            this.btnBusqueda.Click += new System.EventHandler(this.btnBusqueda_Click);
             // 
             // btnTengoLuz
             // 
@@ -110,6 +113,7 @@
             this.btnTengoLuz.TabIndex = 6;
             this.btnTengoLuz.Text = "¿Tengo luz?";
             this.btnTengoLuz.UseVisualStyleBackColor = true;
+            this.btnTengoLuz.Click += new System.EventHandler(this.btnTengoLuz_Click);
             // 
             // lblTitulo
             // 
@@ -143,7 +147,9 @@
             this.flpLogo.Name = "flpLogo";
             this.flpLogo.Size = new System.Drawing.Size(267, 139);
             this.flpLogo.TabIndex = 4;
+            this.flpLogo.Click += new System.EventHandler(this.flpLogo_Click);
             this.flpLogo.Paint += new System.Windows.Forms.PaintEventHandler(this.flpLogo_Paint);
+            this.flpLogo.MouseEnter += new System.EventHandler(this.flpLogo_MouseEnter);
             // 
             // frmCliente
             // 
