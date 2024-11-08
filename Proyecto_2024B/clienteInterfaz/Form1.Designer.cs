@@ -1,6 +1,6 @@
 ﻿namespace clienteInterfaz
 {
-    partial class flpTitulo
+    partial class frmCliente
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCliente));
             this.flpBarraLateral = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnInicio = new System.Windows.Forms.Button();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnConsulta = new System.Windows.Forms.Button();
             this.btnBusqueda = new System.Windows.Forms.Button();
             this.btnTengoLuz = new System.Windows.Forms.Button();
-            this.txtTitulo = new System.Windows.Forms.TextBox();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.flpContenido = new System.Windows.Forms.FlowLayoutPanel();
+            this.flpLogo = new System.Windows.Forms.FlowLayoutPanel();
             this.flpBarraLateral.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // flpBarraLateral
@@ -47,21 +47,12 @@
             this.flpBarraLateral.Controls.Add(this.btnConsulta);
             this.flpBarraLateral.Controls.Add(this.btnBusqueda);
             this.flpBarraLateral.Controls.Add(this.btnTengoLuz);
-            this.flpBarraLateral.Location = new System.Drawing.Point(2, 113);
+            this.flpBarraLateral.Location = new System.Drawing.Point(3, 139);
+            this.flpBarraLateral.Margin = new System.Windows.Forms.Padding(4);
             this.flpBarraLateral.Name = "flpBarraLateral";
-            this.flpBarraLateral.Size = new System.Drawing.Size(200, 410);
+            this.flpBarraLateral.Size = new System.Drawing.Size(267, 505);
             this.flpBarraLateral.TabIndex = 0;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.flowLayoutPanel1.Controls.Add(this.txtTitulo);
-            this.flowLayoutPanel1.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(208, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(646, 65);
-            this.flowLayoutPanel1.TabIndex = 1;
-            this.flowLayoutPanel1.WrapContents = false;
+            this.flpBarraLateral.Paint += new System.Windows.Forms.PaintEventHandler(this.flpBarraLateral_Paint);
             // 
             // btnInicio
             // 
@@ -69,20 +60,13 @@
             this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInicio.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInicio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnInicio.Location = new System.Drawing.Point(3, 3);
+            this.btnInicio.Location = new System.Drawing.Point(4, 4);
+            this.btnInicio.Margin = new System.Windows.Forms.Padding(4);
             this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Size = new System.Drawing.Size(190, 53);
+            this.btnInicio.Size = new System.Drawing.Size(253, 65);
             this.btnInicio.TabIndex = 3;
             this.btnInicio.Text = "Inicio";
             this.btnInicio.UseVisualStyleBackColor = true;
-            // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.BackColor = System.Drawing.SystemColors.Highlight;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(2, 0);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(200, 113);
-            this.flowLayoutPanel3.TabIndex = 4;
             // 
             // btnConsulta
             // 
@@ -90,9 +74,10 @@
             this.btnConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsulta.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsulta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnConsulta.Location = new System.Drawing.Point(3, 62);
+            this.btnConsulta.Location = new System.Drawing.Point(4, 77);
+            this.btnConsulta.Margin = new System.Windows.Forms.Padding(4);
             this.btnConsulta.Name = "btnConsulta";
-            this.btnConsulta.Size = new System.Drawing.Size(190, 53);
+            this.btnConsulta.Size = new System.Drawing.Size(253, 65);
             this.btnConsulta.TabIndex = 4;
             this.btnConsulta.Text = "Consulta";
             this.btnConsulta.UseVisualStyleBackColor = true;
@@ -103,9 +88,10 @@
             this.btnBusqueda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBusqueda.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBusqueda.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnBusqueda.Location = new System.Drawing.Point(3, 121);
+            this.btnBusqueda.Location = new System.Drawing.Point(4, 150);
+            this.btnBusqueda.Margin = new System.Windows.Forms.Padding(4);
             this.btnBusqueda.Name = "btnBusqueda";
-            this.btnBusqueda.Size = new System.Drawing.Size(190, 53);
+            this.btnBusqueda.Size = new System.Drawing.Size(253, 65);
             this.btnBusqueda.TabIndex = 5;
             this.btnBusqueda.Text = "Búsqueda";
             this.btnBusqueda.UseVisualStyleBackColor = true;
@@ -117,53 +103,81 @@
             this.btnTengoLuz.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTengoLuz.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTengoLuz.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnTengoLuz.Location = new System.Drawing.Point(3, 180);
+            this.btnTengoLuz.Location = new System.Drawing.Point(4, 223);
+            this.btnTengoLuz.Margin = new System.Windows.Forms.Padding(4);
             this.btnTengoLuz.Name = "btnTengoLuz";
-            this.btnTengoLuz.Size = new System.Drawing.Size(190, 60);
+            this.btnTengoLuz.Size = new System.Drawing.Size(253, 74);
             this.btnTengoLuz.TabIndex = 6;
             this.btnTengoLuz.Text = "¿Tengo luz?";
             this.btnTengoLuz.UseVisualStyleBackColor = true;
             // 
-            // txtTitulo
+            // lblTitulo
             // 
-            this.txtTitulo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtTitulo.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTitulo.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.txtTitulo.Location = new System.Drawing.Point(3, 3);
-            this.txtTitulo.Name = "txtTitulo";
-            this.txtTitulo.Size = new System.Drawing.Size(413, 50);
-            this.txtTitulo.TabIndex = 0;
-            this.txtTitulo.Text = "CORTES DE ENERGÍA 2024";
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblTitulo.Location = new System.Drawing.Point(303, 39);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(835, 69);
+            this.lblTitulo.TabIndex = 1;
+            this.lblTitulo.Text = "CORTES DE ENERGÍA 2024";
             // 
-            // flpTitulo
+            // flpContenido
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.flpContenido.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.flpContenido.BackgroundImage = global::clienteInterfaz.Properties.Resources.cronograma_img;
+            this.flpContenido.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.flpContenido.Location = new System.Drawing.Point(277, 139);
+            this.flpContenido.Name = "flpContenido";
+            this.flpContenido.Size = new System.Drawing.Size(943, 492);
+            this.flpContenido.TabIndex = 5;
+            // 
+            // flpLogo
+            // 
+            this.flpLogo.BackColor = System.Drawing.SystemColors.Highlight;
+            this.flpLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("flpLogo.BackgroundImage")));
+            this.flpLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.flpLogo.Location = new System.Drawing.Point(3, 0);
+            this.flpLogo.Margin = new System.Windows.Forms.Padding(4);
+            this.flpLogo.Name = "flpLogo";
+            this.flpLogo.Size = new System.Drawing.Size(267, 139);
+            this.flpLogo.TabIndex = 4;
+            this.flpLogo.Paint += new System.Windows.Forms.PaintEventHandler(this.flpLogo_Paint);
+            // 
+            // frmCliente
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(854, 515);
-            this.Controls.Add(this.flowLayoutPanel3);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.BackColor = System.Drawing.SystemColors.Highlight;
+            this.ClientSize = new System.Drawing.Size(1232, 634);
+            this.Controls.Add(this.flpContenido);
+            this.Controls.Add(this.lblTitulo);
+            this.Controls.Add(this.flpLogo);
             this.Controls.Add(this.flpBarraLateral);
-            this.Name = "flpTitulo";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.Name = "frmCliente";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.frmCliente_Load);
             this.flpBarraLateral.ResumeLayout(false);
             this.flpBarraLateral.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel flpBarraLateral;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button btnInicio;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.FlowLayoutPanel flpLogo;
         private System.Windows.Forms.Button btnConsulta;
         private System.Windows.Forms.Button btnBusqueda;
         private System.Windows.Forms.Button btnTengoLuz;
-        private System.Windows.Forms.TextBox txtTitulo;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.FlowLayoutPanel flpContenido;
     }
 }
 

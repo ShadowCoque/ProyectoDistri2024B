@@ -16,7 +16,7 @@ namespace clienteInterfaz
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new flpTitulo());
+            Application.Run(new frmCliente());
         }
     }
 }

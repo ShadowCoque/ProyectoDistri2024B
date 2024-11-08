@@ -1,18 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\USUARIO\\Documentos\\Docs_Dennis\\2024B\\Aplicaciones Distribuidas\\Programas\\ProyectoDistri2024B\\Proyecto_2024B\\",
+  "WorkspaceRootPath": "C:\\Users\\Sebas\\Documents\\7mo semestre FINAL\\Distri\\ProyectoDistri2024B\\Proyecto_2024B\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2785B2D3-28C1-43D1-AADA-6589EDF159B3}|clienteInterfaz\\clienteInterfaz.csproj|D:\\USUARIO\\Documentos\\Docs_Dennis\\2024B\\Aplicaciones Distribuidas\\Programas\\ProyectoDistri2024B\\Proyecto_2024B\\clienteinterfaz\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{2785B2D3-28C1-43D1-AADA-6589EDF159B3}|clienteInterfaz\\clienteInterfaz.csproj|c:\\users\\sebas\\documents\\7mo semestre final\\distri\\proyectodistri2024b\\proyecto_2024b\\clienteinterfaz\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{2785B2D3-28C1-43D1-AADA-6589EDF159B3}|clienteInterfaz\\clienteInterfaz.csproj|solutionrelative:clienteinterfaz\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2785B2D3-28C1-43D1-AADA-6589EDF159B3}|clienteInterfaz\\clienteInterfaz.csproj|d:\\usuario\\documentos\\docs_dennis\\2024b\\aplicaciones distribuidas\\programas\\proyectodistri2024b\\proyecto_2024b\\clienteinterfaz\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2785B2D3-28C1-43D1-AADA-6589EDF159B3}|clienteInterfaz\\clienteInterfaz.csproj|C:\\Users\\Sebas\\Documents\\7mo semestre FINAL\\Distri\\ProyectoDistri2024B\\Proyecto_2024B\\clienteinterfaz\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2785B2D3-28C1-43D1-AADA-6589EDF159B3}|clienteInterfaz\\clienteInterfaz.csproj|solutionrelative:clienteinterfaz\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2785B2D3-28C1-43D1-AADA-6589EDF159B3}|clienteInterfaz\\clienteInterfaz.csproj|C:\\Users\\Sebas\\Documents\\7mo semestre FINAL\\Distri\\ProyectoDistri2024B\\Proyecto_2024B\\clienteinterfaz\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2785B2D3-28C1-43D1-AADA-6589EDF159B3}|clienteInterfaz\\clienteInterfaz.csproj|solutionrelative:clienteinterfaz\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2785B2D3-28C1-43D1-AADA-6589EDF159B3}|clienteInterfaz\\clienteInterfaz.csproj|d:\\usuario\\documentos\\docs_dennis\\2024b\\aplicaciones distribuidas\\programas\\proyectodistri2024b\\proyecto_2024b\\clienteinterfaz\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2785B2D3-28C1-43D1-AADA-6589EDF159B3}|clienteInterfaz\\clienteInterfaz.csproj|solutionrelative:clienteinterfaz\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2785B2D3-28C1-43D1-AADA-6589EDF159B3}|clienteInterfaz\\clienteInterfaz.csproj|c:\\users\\sebas\\documents\\7mo semestre final\\distri\\proyectodistri2024b\\proyecto_2024b\\clienteinterfaz\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2785B2D3-28C1-43D1-AADA-6589EDF159B3}|clienteInterfaz\\clienteInterfaz.csproj|solutionrelative:clienteinterfaz\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,58 +26,43 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 3,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Sebas\\Documents\\7mo semestre FINAL\\Distri\\ProyectoDistri2024B\\Proyecto_2024B\\clienteInterfaz\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "clienteInterfaz\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\Sebas\\Documents\\7mo semestre FINAL\\Distri\\ProyectoDistri2024B\\Proyecto_2024B\\clienteInterfaz\\Form1.Designer.cs",
+              "RelativeToolTip": "clienteInterfaz\\Form1.Designer.cs",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAAwKIAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T01:04:38.272Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Form1.cs",
-              "DocumentMoniker": "D:\\USUARIO\\Documentos\\Docs_Dennis\\2024B\\Aplicaciones Distribuidas\\Programas\\ProyectoDistri2024B\\Proyecto_2024B\\clienteInterfaz\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Sebas\\Documents\\7mo semestre FINAL\\Distri\\ProyectoDistri2024B\\Proyecto_2024B\\clienteInterfaz\\Form1.cs",
               "RelativeDocumentMoniker": "clienteInterfaz\\Form1.cs",
-              "ToolTip": "D:\\USUARIO\\Documentos\\Docs_Dennis\\2024B\\Aplicaciones Distribuidas\\Programas\\ProyectoDistri2024B\\Proyecto_2024B\\clienteInterfaz\\Form1.cs*",
-              "RelativeToolTip": "clienteInterfaz\\Form1.cs*",
-              "ViewState": "AQIAAAUAAAAAAAAAAIAwwBIAAAAAAAAA",
+              "ToolTip": "C:\\Users\\Sebas\\Documents\\7mo semestre FINAL\\Distri\\ProyectoDistri2024B\\Proyecto_2024B\\clienteInterfaz\\Form1.cs",
+              "RelativeToolTip": "clienteInterfaz\\Form1.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAIA1wBgAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-05T02:54:07.037Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\USUARIO\\Documentos\\Docs_Dennis\\2024B\\Aplicaciones Distribuidas\\Programas\\ProyectoDistri2024B\\Proyecto_2024B\\clienteInterfaz\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Sebas\\Documents\\7mo semestre FINAL\\Distri\\ProyectoDistri2024B\\Proyecto_2024B\\clienteInterfaz\\Program.cs",
               "RelativeDocumentMoniker": "clienteInterfaz\\Program.cs",
-              "ToolTip": "D:\\USUARIO\\Documentos\\Docs_Dennis\\2024B\\Aplicaciones Distribuidas\\Programas\\ProyectoDistri2024B\\Proyecto_2024B\\clienteInterfaz\\Program.cs",
+              "ToolTip": "C:\\Users\\Sebas\\Documents\\7mo semestre FINAL\\Distri\\ProyectoDistri2024B\\Proyecto_2024B\\clienteInterfaz\\Program.cs",
               "RelativeToolTip": "clienteInterfaz\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-04T17:21:03.723Z",
               "EditorCaption": ""
@@ -82,31 +71,13 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\USUARIO\\Documentos\\Docs_Dennis\\2024B\\Aplicaciones Distribuidas\\Programas\\ProyectoDistri2024B\\Proyecto_2024B\\clienteInterfaz\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Sebas\\Documents\\7mo semestre FINAL\\Distri\\ProyectoDistri2024B\\Proyecto_2024B\\clienteInterfaz\\Form1.cs",
               "RelativeDocumentMoniker": "clienteInterfaz\\Form1.cs",
-              "ToolTip": "D:\\USUARIO\\Documentos\\Docs_Dennis\\2024B\\Aplicaciones Distribuidas\\Programas\\ProyectoDistri2024B\\Proyecto_2024B\\clienteInterfaz\\Form1.cs [Dise\u00F1o]*",
-              "RelativeToolTip": "clienteInterfaz\\Form1.cs [Dise\u00F1o]*",
+              "ToolTip": "C:\\Users\\Sebas\\Documents\\7mo semestre FINAL\\Distri\\ProyectoDistri2024B\\Proyecto_2024B\\clienteInterfaz\\Form1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "clienteInterfaz\\Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-04T16:29:27.03Z",
               "EditorCaption": " [Dise\u00F1o]"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 565,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             }
           ]
         }

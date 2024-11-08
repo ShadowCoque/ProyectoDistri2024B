@@ -8,3 +8,13 @@ D:\USUARIO\Documentos\Docs_Dennis\2024B\Aplicaciones Distribuidas\Programas\Proy
 D:\USUARIO\Documentos\Docs_Dennis\2024B\Aplicaciones Distribuidas\Programas\ProyectoDistri2024B\Proyecto_2024B\clienteInterfaz\obj\Debug\clienteInterfaz.csproj.CoreCompileInputs.cache
 D:\USUARIO\Documentos\Docs_Dennis\2024B\Aplicaciones Distribuidas\Programas\ProyectoDistri2024B\Proyecto_2024B\clienteInterfaz\obj\Debug\clienteInterfaz.exe
 D:\USUARIO\Documentos\Docs_Dennis\2024B\Aplicaciones Distribuidas\Programas\ProyectoDistri2024B\Proyecto_2024B\clienteInterfaz\obj\Debug\clienteInterfaz.pdb
+C:\Users\Sebas\Documents\7mo semestre FINAL\Distri\ProyectoDistri2024B\Proyecto_2024B\clienteInterfaz\bin\Debug\clienteInterfaz.exe.config
+C:\Users\Sebas\Documents\7mo semestre FINAL\Distri\ProyectoDistri2024B\Proyecto_2024B\clienteInterfaz\bin\Debug\clienteInterfaz.exe
+C:\Users\Sebas\Documents\7mo semestre FINAL\Distri\ProyectoDistri2024B\Proyecto_2024B\clienteInterfaz\bin\Debug\clienteInterfaz.pdb
+C:\Users\Sebas\Documents\7mo semestre FINAL\Distri\ProyectoDistri2024B\Proyecto_2024B\clienteInterfaz\obj\Debug\clienteInterfaz.csproj.AssemblyReference.cache
+C:\Users\Sebas\Documents\7mo semestre FINAL\Distri\ProyectoDistri2024B\Proyecto_2024B\clienteInterfaz\obj\Debug\clienteInterfaz.Properties.Resources.resources
+C:\Users\Sebas\Documents\7mo semestre FINAL\Distri\ProyectoDistri2024B\Proyecto_2024B\clienteInterfaz\obj\Debug\clienteInterfaz.csproj.GenerateResource.cache
+C:\Users\Sebas\Documents\7mo semestre FINAL\Distri\ProyectoDistri2024B\Proyecto_2024B\clienteInterfaz\obj\Debug\clienteInterfaz.csproj.CoreCompileInputs.cache
+C:\Users\Sebas\Documents\7mo semestre FINAL\Distri\ProyectoDistri2024B\Proyecto_2024B\clienteInterfaz\obj\Debug\clienteInterfaz.exe
+C:\Users\Sebas\Documents\7mo semestre FINAL\Distri\ProyectoDistri2024B\Proyecto_2024B\clienteInterfaz\obj\Debug\clienteInterfaz.pdb
+C:\Users\Sebas\Documents\7mo semestre FINAL\Distri\ProyectoDistri2024B\Proyecto_2024B\clienteInterfaz\obj\Debug\clienteInterfaz.frmCliente.resources
