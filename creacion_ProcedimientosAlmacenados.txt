@@ -1,0 +1,35 @@
+USE ProgramacionCortesDeLuz
+
+
+CREATE PROCEDURE BuscarSubestacionPorSector
+    @Sector VARCHAR(MAX)
+AS
+BEGIN
+    SELECT subestacion
+    FROM Subestaciones
+    WHERE sectores LIKE '%' + @Sector + '%';
+END;
+
+
+CREATE PROCEDURE VerificarDisponibilidadLuz
+    @HoraCliente TIME,
+    @Estacion VARCHAR(255),
+    @TieneLuz BIT OUTPUT
+AS
+BEGIN
+    -- Establece el valor predeterminado de @TieneLuz a 1 (tiene luz)
+    SET @TieneLuz = 1;
+
+    -- Verificar si la hora está dentro del primer intervalo de cortes (horario1_inicio y horario1_fin)
+    IF EXISTS (
+        SELECT 1
+        FROM Subestaciones
+        WHERE subestacion = @Estacion
+        AND @HoraCliente BETWEEN horario1_inicio AND horario1_fin
+    )
+    BEGIN
+        -- Si la hora está en el rango de cortes, establece @TieneLuz a 0 (no tiene luz)
+        SET @TieneLuz = 0;
+    END
+END;
+

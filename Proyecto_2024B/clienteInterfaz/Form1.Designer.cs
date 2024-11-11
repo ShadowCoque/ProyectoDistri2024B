@@ -307,10 +307,10 @@
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.flpLogo);
             this.Controls.Add(this.flpBarraLateral);
+            this.Controls.Add(this.pnlTengoLuz);
             this.Controls.Add(this.flpContenido);
             this.Controls.Add(this.pnlBusqueda);
             this.Controls.Add(this.pnlConsulta);
-            this.Controls.Add(this.pnlTengoLuz);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmCliente";
