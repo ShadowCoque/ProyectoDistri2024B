@@ -38,7 +38,7 @@
             this.flpContenido = new System.Windows.Forms.FlowLayoutPanel();
             this.flpLogo = new System.Windows.Forms.FlowLayoutPanel();
             this.lblIndicacion = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtEstacionConsulta = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.pnlConsulta = new System.Windows.Forms.Panel();
             this.lblParametro = new System.Windows.Forms.Label();
@@ -177,15 +177,15 @@
             this.lblIndicacion.TabIndex = 1;
             this.lblIndicacion.Text = "Ingrese su estación";
             // 
-            // textBox1
+            // txtEstacionConsulta
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(59, 86);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(828, 27);
-            this.textBox1.TabIndex = 2;
+            this.txtEstacionConsulta.BackColor = System.Drawing.Color.Honeydew;
+            this.txtEstacionConsulta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEstacionConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEstacionConsulta.Location = new System.Drawing.Point(59, 86);
+            this.txtEstacionConsulta.Name = "txtEstacionConsulta";
+            this.txtEstacionConsulta.Size = new System.Drawing.Size(828, 27);
+            this.txtEstacionConsulta.TabIndex = 2;
             // 
             // btnBuscar
             // 
@@ -198,11 +198,12 @@
             this.btnBuscar.TabIndex = 3;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // pnlConsulta
             // 
             this.pnlConsulta.BackColor = System.Drawing.Color.White;
-            this.pnlConsulta.Controls.Add(this.textBox1);
+            this.pnlConsulta.Controls.Add(this.txtEstacionConsulta);
             this.pnlConsulta.Controls.Add(this.lblIndicacion);
             this.pnlConsulta.Controls.Add(this.btnBuscar);
             this.pnlConsulta.Location = new System.Drawing.Point(277, 139);
@@ -242,6 +243,7 @@
             this.btnParametro.TabIndex = 3;
             this.btnParametro.Text = "Buscar";
             this.btnParametro.UseVisualStyleBackColor = false;
+            this.btnParametro.Click += new System.EventHandler(this.btnParametro_Click);
             // 
             // pnlBusqueda
             // 
@@ -307,10 +309,10 @@
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.flpLogo);
             this.Controls.Add(this.flpBarraLateral);
-            this.Controls.Add(this.pnlTengoLuz);
-            this.Controls.Add(this.flpContenido);
             this.Controls.Add(this.pnlBusqueda);
             this.Controls.Add(this.pnlConsulta);
+            this.Controls.Add(this.pnlTengoLuz);
+            this.Controls.Add(this.flpContenido);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmCliente";
@@ -341,7 +343,7 @@
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.FlowLayoutPanel flpContenido;
         private System.Windows.Forms.Label lblIndicacion;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtEstacionConsulta;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Panel pnlConsulta;
         private System.Windows.Forms.Panel pnlBusqueda;

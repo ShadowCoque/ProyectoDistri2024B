@@ -7,6 +7,9 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Security.Cryptography.X509Certificates;
 using static System.Collections.Specialized.BitVector32;
+using System.Net;
+using System.Threading;
+using System.Net.Sockets;
 
 namespace servidorConsola
 {
@@ -14,11 +17,41 @@ namespace servidorConsola
     {
         static void Main(string[] args)
         {
-            
-            /*busquedaEstacion("EL TEJAR");
-            DateTime tiempoActual = new DateTime(2024, 1, 1, 8, 30, 0);
-            Console.WriteLine(tengoLuz(tiempoActual.TimeOfDay, "MIRADOR ALTO"));*/
-            
+            //Definición del socket para espera de conexiones
+            int puerto = 8000;
+            TcpListener servidor = new TcpListener(IPAddress.Any, puerto);
+            Console.WriteLine("El servidor está escuchando en el puerto " + puerto);
+
+            while (true)
+            {
+                TcpClient cliente = servidor.AcceptTcpClient();
+                Console.WriteLine("Usuario conectado");
+
+                //Hilo independiente separado para manejar multiples clientes
+                Thread clienteThread = new Thread(() => manejoCliente(cliente));
+                clienteThread.Start();
+            }
+
+            async void manejoCliente(TcpClient cliente)
+            {
+                byte[] bufferRx = new byte[1024];
+                NetworkStream flujo = cliente.GetStream();
+                int bytesLeidos = await flujo.ReadAsync(bufferRx, 0, bufferRx.Length);
+                do
+                {
+                    string solicitud = Encoding.ASCII.GetString(bufferRx, 0, bytesLeidos);
+                    Console.WriteLine("Solicitud recibida");
+                    
+                    //Para separar metodo y parametros
+                    string[] partes = solicitud.Split('|');
+                    string metodo = partes[0];
+                    if(metodo)
+                    for (int i = 0; i == partes.Length; i++)
+                    {
+
+                    }
+                }while (bytesLeidos > 0);
+            }
 
             //Metodo de afirmacion o negacion de si tiene luz el cliente mediante su hora y su estacion
             string tengoLuz(TimeSpan horaCliente, string estacion)

@@ -5,6 +5,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
+using System.Net.Sockets;
 using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +16,9 @@ namespace clienteInterfaz
 {
     public partial class frmCliente : Form
     {
+        private IPEndPoint remoto = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 8000);
+        private TcpClient cliente = new TcpClient();
+
         public frmCliente()
         {
             InitializeComponent();
@@ -22,6 +27,7 @@ namespace clienteInterfaz
         private void frmCliente_Load(object sender, EventArgs e)
         {
             flpContenido.BringToFront();
+
         }
 
         private void flpLogo_Paint(object sender, PaintEventArgs e)
@@ -92,6 +98,31 @@ namespace clienteInterfaz
             pnlBusqueda.SendToBack();
             pnlBusqueda.SendToBack();
             pnlTengoLuz.BringToFront();
+        }
+
+        //Para busqueda de horario por estacion
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            cliente.Connect(remoto);
+            if (cliente.Connected)
+            {
+                NetworkStream flujo = cliente.GetStream();
+                byte[] bufferTx = Encoding.ASCII.GetBytes(txtEstacionConsulta.ToString());
+                flujo.Write(bufferTx, 0, bufferTx.Length);
+                cliente.Close();
+            }
+        }
+
+        private void btnParametro_Click(object sender, EventArgs e)
+        {
+            cliente.Connect(remoto);
+            if (cliente.Connected)
+            {
+                NetworkStream flujo = cliente.GetStream();
+                byte[] bufferTx = Encoding.ASCII.GetBytes("busquedaEstacion" + "|" +txtEstacionConsulta.ToString());
+                flujo.Write(bufferTx, 0, bufferTx.Length);
+                cliente.Close();
+            }
         }
     }
 }
