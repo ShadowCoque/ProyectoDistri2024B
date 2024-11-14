@@ -8,6 +8,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Reflection.Emit;
+using System.Security.Permissions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -27,6 +28,10 @@ namespace clienteInterfaz
         private void frmCliente_Load(object sender, EventArgs e)
         {
             flpContenido.BringToFront();
+            lblInfoLuz.Text = "";
+            dGVEStaciones.Visible = false;
+            lblHorario.Text = "";
+            lblInd.Text = "";
 
         }
 
@@ -101,28 +106,110 @@ namespace clienteInterfaz
         }
 
         //Para busqueda de horario por estacion
-        private void btnBuscar_Click(object sender, EventArgs e)
+        private async void btnBuscar_Click(object sender, EventArgs e)
         {
-            cliente.Connect(remoto);
+            if (!cliente.Connected)
+            {
+                cliente.Connect(remoto);
+            }
             if (cliente.Connected)
             {
+                // Lo que va a enviar el cliente
                 NetworkStream flujo = cliente.GetStream();
-                byte[] bufferTx = Encoding.ASCII.GetBytes(txtEstacionConsulta.ToString());
+                byte[] bufferTx = Encoding.ASCII.GetBytes("busquedaHorario" + "|" + txtEstacionConsulta.Text.ToString());
                 flujo.Write(bufferTx, 0, bufferTx.Length);
-                cliente.Close();
+
+                // Lo que va a recibir el cliente
+                byte[] bufferRx = new byte[1024];
+                int bytesLeidos = await flujo.ReadAsync(bufferRx, 0, bufferRx.Length);
+                if (bytesLeidos > 0)
+                {
+                    string respuesta = Encoding.ASCII.GetString(bufferRx, 0, bytesLeidos);
+                    lblInd.Text = "Horario de desconexión:";
+                    lblHorario.Text = respuesta;
+                }
+
+                
             }
         }
 
-        private void btnParametro_Click(object sender, EventArgs e)
+        private async void btnParametro_Click(object sender, EventArgs e)
         {
-            cliente.Connect(remoto);
+            if (!cliente.Connected)
+            {
+                cliente.Connect(remoto);
+            }
             if (cliente.Connected)
             {
                 NetworkStream flujo = cliente.GetStream();
-                byte[] bufferTx = Encoding.ASCII.GetBytes("busquedaEstacion" + "|" +txtEstacionConsulta.ToString());
+                byte[] bufferTx = Encoding.ASCII.GetBytes("busquedaEstacion" + "|" + txtParametro.Text.ToString());
                 flujo.Write(bufferTx, 0, bufferTx.Length);
-                cliente.Close();
+
+                byte[] bufferRx = new byte[1024];
+                int bytesLeidos = await flujo.ReadAsync(bufferRx, 0, bufferRx.Length);
+                if (bytesLeidos>0)
+                {
+                    string respuesta = Encoding.ASCII.GetString(bufferRx, 0, bufferRx.Length);
+                    string[] respuestas = respuesta.Split('|');
+                    dGVEStaciones.Rows.Clear();
+                    foreach(string estacion in respuestas)
+                    {
+                        dGVEStaciones.Rows.Add("- " + estacion);
+                    }
+                }
             }
+            dGVEStaciones.Visible = true;
         }
+
+        private async void btnLuz_Click(object sender, EventArgs e)
+        {
+            DateTime ahora = DateTime.Now;
+            TimeSpan horaLocal = ahora.TimeOfDay;
+            if (!cliente.Connected)
+            {
+                cliente.Connect(remoto);
+            }
+            if (cliente.Connected)
+            {
+                NetworkStream flujo = cliente.GetStream();
+                byte[] bufferTx = Encoding.ASCII.GetBytes("tengoLuz" + "|" + horaLocal.ToString()/*"05:30:15"*/ + "|" + txtTengoLuz.Text.ToString());
+                flujo.Write(bufferTx, 0, bufferTx.Length);
+
+                byte[] bufferRx = new byte[1024];
+                int bytesLeidos = await flujo.ReadAsync(bufferRx, 0, bufferRx.Length);
+                if (bytesLeidos > 0)
+                {
+                    string respuesta = Encoding.ASCII.GetString(bufferRx, 0, bytesLeidos);
+                    lblInfoLuz.Text = respuesta; // Mostrar respuesta en la interfaz
+                }
+
+            }
+            //cliente.Close();
+        }
+
+        private void frmCliente_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            cliente.Close();
+        }
+
+        /*private async Task EscucharRespuesta()
+        {
+            try
+            {
+                NetworkStream flujo;
+                byte[] bufferRx = new byte[512];
+                int bytesLeidos = await flujo.ReadAsync(bufferRx, 0, bufferRx.Length);
+                if (bytesLeidos > 0)
+                {
+                    string respuesta = Encoding.ASCII.GetString(bufferRx, 0, bytesLeidos);
+                    txtRespuesta.Text = respuesta; // Mostrar respuesta en la interfaz
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al recibir respuesta: {ex.Message}");
+            }
+        }*/
+
     }
 }

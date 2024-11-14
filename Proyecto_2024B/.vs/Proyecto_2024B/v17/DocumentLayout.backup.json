@@ -7,12 +7,16 @@
       "RelativeMoniker": "D:0:0:{E63D80E2-EC6E-4457-AC7E-E77A6E5AEC2B}|servidorConsola\\servidorConsola.csproj|solutionrelative:servidorconsola\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{2785B2D3-28C1-43D1-AADA-6589EDF159B3}|clienteInterfaz\\clienteInterfaz.csproj|C:\\Users\\Sebas\\Documents\\7mo semestre FINAL\\Distri\\ProyectoDistri2024B\\Proyecto_2024B\\clienteinterfaz\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2785B2D3-28C1-43D1-AADA-6589EDF159B3}|clienteInterfaz\\clienteInterfaz.csproj|solutionrelative:clienteinterfaz\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2785B2D3-28C1-43D1-AADA-6589EDF159B3}|clienteInterfaz\\clienteInterfaz.csproj|C:\\Users\\Sebas\\Documents\\7mo semestre FINAL\\Distri\\ProyectoDistri2024B\\Proyecto_2024B\\clienteinterfaz\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2785B2D3-28C1-43D1-AADA-6589EDF159B3}|clienteInterfaz\\clienteInterfaz.csproj|solutionrelative:clienteinterfaz\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2785B2D3-28C1-43D1-AADA-6589EDF159B3}|clienteInterfaz\\clienteInterfaz.csproj|C:\\Users\\Sebas\\Documents\\7mo semestre FINAL\\Distri\\ProyectoDistri2024B\\Proyecto_2024B\\clienteinterfaz\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2785B2D3-28C1-43D1-AADA-6589EDF159B3}|clienteInterfaz\\clienteInterfaz.csproj|solutionrelative:clienteinterfaz\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{2785B2D3-28C1-43D1-AADA-6589EDF159B3}|clienteInterfaz\\clienteInterfaz.csproj|c:\\users\\sebas\\documents\\7mo semestre final\\distri\\proyectodistri2024b\\proyecto_2024b\\clienteinterfaz\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2785B2D3-28C1-43D1-AADA-6589EDF159B3}|clienteInterfaz\\clienteInterfaz.csproj|solutionrelative:clienteinterfaz\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E63D80E2-EC6E-4457-AC7E-E77A6E5AEC2B}|servidorConsola\\servidorConsola.csproj|C:\\Users\\Sebas\\Documents\\7mo semestre FINAL\\Distri\\ProyectoDistri2024B\\Proyecto_2024B\\servidorconsola\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
@@ -26,11 +30,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Sebas\\Documents\\7mo semestre FINAL\\Distri\\ProyectoDistri2024B\\Proyecto_2024B\\clienteInterfaz\\Program.cs",
+              "RelativeDocumentMoniker": "clienteInterfaz\\Program.cs",
+              "ToolTip": "C:\\Users\\Sebas\\Documents\\7mo semestre FINAL\\Distri\\ProyectoDistri2024B\\Proyecto_2024B\\clienteInterfaz\\Program.cs",
+              "RelativeToolTip": "clienteInterfaz\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T18:39:36.25Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "App.config",
               "DocumentMoniker": "C:\\Users\\Sebas\\Documents\\7mo semestre FINAL\\Distri\\ProyectoDistri2024B\\Proyecto_2024B\\servidorConsola\\App.config",
               "RelativeDocumentMoniker": "servidorConsola\\App.config",
@@ -38,7 +55,8 @@
               "RelativeToolTip": "servidorConsola\\App.config",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-11-10T17:50:58.954Z"
+              "WhenOpened": "2024-11-10T17:50:58.954Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -48,14 +66,14 @@
               "RelativeDocumentMoniker": "servidorConsola\\Program.cs",
               "ToolTip": "C:\\Users\\Sebas\\Documents\\7mo semestre FINAL\\Distri\\ProyectoDistri2024B\\Proyecto_2024B\\servidorConsola\\Program.cs",
               "RelativeToolTip": "servidorConsola\\Program.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-10T17:45:46.039Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Form1.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Sebas\\Documents\\7mo semestre FINAL\\Distri\\ProyectoDistri2024B\\Proyecto_2024B\\clienteInterfaz\\Form1.cs",
               "RelativeDocumentMoniker": "clienteInterfaz\\Form1.cs",
@@ -67,13 +85,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\Sebas\\Documents\\7mo semestre FINAL\\Distri\\ProyectoDistri2024B\\Proyecto_2024B\\clienteInterfaz\\Form1.cs",
               "RelativeDocumentMoniker": "clienteInterfaz\\Form1.cs",
               "ToolTip": "C:\\Users\\Sebas\\Documents\\7mo semestre FINAL\\Distri\\ProyectoDistri2024B\\Proyecto_2024B\\clienteInterfaz\\Form1.cs",
               "RelativeToolTip": "clienteInterfaz\\Form1.cs",
-              "ViewState": "AgIAAGEAAAAAAAAAAAAcwHsAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAcwHYAAABdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-05T02:54:07.037Z",
               "EditorCaption": ""

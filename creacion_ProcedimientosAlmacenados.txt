@@ -14,22 +14,82 @@ END;
 CREATE PROCEDURE VerificarDisponibilidadLuz
     @HoraCliente TIME,
     @Estacion VARCHAR(255),
-    @TieneLuz BIT OUTPUT
+    @TieneLuz VARCHAR(100) OUTPUT
 AS
 BEGIN
-    -- Establece el valor predeterminado de @TieneLuz a 1 (tiene luz)
-    SET @TieneLuz = 1;
-
-    -- Verificar si la hora está dentro del primer intervalo de cortes (horario1_inicio y horario1_fin)
+    -- Verificar si la estación existe en la base de datos
     IF EXISTS (
         SELECT 1
         FROM Subestaciones
         WHERE subestacion = @Estacion
-        AND @HoraCliente BETWEEN horario1_inicio AND horario1_fin
     )
     BEGIN
-        -- Si la hora está en el rango de cortes, establece @TieneLuz a 0 (no tiene luz)
-        SET @TieneLuz = 0;
+        -- Verificar si la hora está dentro de cualquiera de los intervalos de cortes
+        IF EXISTS (
+            SELECT 1
+            FROM Subestaciones
+            WHERE subestacion = @Estacion
+            AND (@HoraCliente BETWEEN horario1_inicio AND horario1_fin
+                 OR @HoraCliente BETWEEN horario2_inicio AND horario2_fin)
+        )
+        BEGIN
+            -- Si la hora está en el rango de cortes, establece @TieneLuz a "No tiene luz"
+            SET @TieneLuz = 'No tiene luz';
+        END
+        ELSE
+        BEGIN
+            -- Si la hora no está en el rango de cortes, establece @TieneLuz a "Tiene luz"
+            SET @TieneLuz = 'Si tiene luz';
+        END
+    END
+    ELSE
+    BEGIN
+        -- Si la estación no se encuentra en la base de datos
+        SET @TieneLuz = 'No se pudo encontrar ninguna información relacionada a la estación ingresada';
+    END
+END;
+
+
+CREATE PROCEDURE ObtenerHorariosCorte
+    @Estacion VARCHAR(255),
+    @HorariosCorte VARCHAR(255) OUTPUT
+AS
+BEGIN
+    DECLARE @Horario1 NVARCHAR(50) = NULL;
+    DECLARE @Horario2 NVARCHAR(50) = NULL;
+
+    -- Verificar si la estación existe en la base de datos
+    IF EXISTS (
+        SELECT 1
+        FROM Subestaciones
+        WHERE subestacion = @Estacion
+    )
+    BEGIN
+        -- Obtener los horarios de corte (horario1 y horario2)
+        SELECT 
+            @Horario1 = CONCAT(CONVERT(VARCHAR(5), horario1_inicio, 108), ' - ', CONVERT(VARCHAR(5), horario1_fin, 108)),
+            @Horario2 = CASE 
+                            WHEN horario2_inicio IS NOT NULL AND horario2_fin IS NOT NULL 
+                            THEN CONCAT(CONVERT(VARCHAR(5), horario2_inicio, 108), ' - ', CONVERT(VARCHAR(5), horario2_fin, 108))
+                            ELSE NULL
+                        END
+        FROM Subestaciones
+        WHERE subestacion = @Estacion;
+        
+        -- Establecer el valor de salida
+        IF @Horario2 IS NOT NULL
+        BEGIN
+            SET @HorariosCorte = @Horario1 + ' y ' + @Horario2;
+        END
+        ELSE
+        BEGIN
+            SET @HorariosCorte = @Horario1;
+        END
+    END
+    ELSE
+    BEGIN
+        -- Si la estación no se encuentra en la base de datos
+        SET @HorariosCorte = 'Error: No se pudo encontrar ninguna informacion relacionada a la estacion ingresada';
     END
 END;
 

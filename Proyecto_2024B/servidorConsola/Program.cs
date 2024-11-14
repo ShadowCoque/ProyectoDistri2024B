@@ -21,6 +21,7 @@ namespace servidorConsola
             int puerto = 8000;
             TcpListener servidor = new TcpListener(IPAddress.Any, puerto);
             Console.WriteLine("El servidor está escuchando en el puerto " + puerto);
+            servidor.Start();
 
             while (true)
             {
@@ -36,21 +37,54 @@ namespace servidorConsola
             {
                 byte[] bufferRx = new byte[1024];
                 NetworkStream flujo = cliente.GetStream();
-                int bytesLeidos = await flujo.ReadAsync(bufferRx, 0, bufferRx.Length);
+                
                 do
                 {
+                    int bytesLeidos = await flujo.ReadAsync(bufferRx, 0, bufferRx.Length);
+                    if (bytesLeidos == 0)
+                    {
+                        break;
+                    }
                     string solicitud = Encoding.ASCII.GetString(bufferRx, 0, bytesLeidos);
                     Console.WriteLine("Solicitud recibida");
+                    string respuesta = "";
                     
                     //Para separar metodo y parametros
-                    string[] partes = solicitud.Split('|');
+                    string[] partes = solicitud.Split('|'); //pto de parada
                     string metodo = partes[0];
-                    if(metodo)
-                    for (int i = 0; i == partes.Length; i++)
-                    {
 
+                    //Condicional para el metodo correspondiente con sus respectivos parametros
+                    if(metodo== "busquedaEstacion")
+                    {
+                        string parametroSector = partes[1];
+                        List<string> estaciones = busquedaEstacion(parametroSector);
+                        string stringEstaciones = "";
+                        foreach (string estacion in estaciones)
+                        {
+                            
+                            stringEstaciones = stringEstaciones + estacion + "|";
+                            respuesta = stringEstaciones.Remove(stringEstaciones.Length - 1);
+                        }
+                        
                     }
-                }while (bytesLeidos > 0);
+                    if(metodo == "tengoLuz")
+                    {
+                        TimeSpan parametroHoraCliente = TimeSpan.Parse(partes[1]);
+                        string parametroEstacion = partes[2];
+                        respuesta = tengoLuz(parametroHoraCliente, parametroEstacion);
+                    }
+                    if (metodo == "busquedaHorario")
+                    {
+                        string estacion = partes[1];
+                        respuesta = busquedaHorario(estacion);
+                    }
+
+                    byte[] bufferTx = Encoding.ASCII.GetBytes(respuesta);
+                    await flujo.WriteAsync(bufferTx, 0, bufferTx.Length);
+                    
+                }while (true);
+                cliente.Close();
+                Console.WriteLine("Cliente Desconectdo");
             }
 
             //Metodo de afirmacion o negacion de si tiene luz el cliente mediante su hora y su estacion
@@ -72,7 +106,7 @@ namespace servidorConsola
                         cmd.Parameters.AddWithValue("@HoraCliente", horaCliente);
                         cmd.Parameters.AddWithValue("@Estacion", estacion);
                         //Se configura un parámetro de salida para el procedimiento almacenado
-                        SqlParameter tieneLuzParam = new SqlParameter("@TieneLuz", SqlDbType.Bit)
+                        SqlParameter tieneLuzParam = new SqlParameter("@TieneLuz", SqlDbType.VarChar, 100)
                         {
                             Direction = ParameterDirection.Output,
                         };
@@ -81,20 +115,13 @@ namespace servidorConsola
                         //Se ejecuta el procedimiento
                         cmd.ExecuteNonQuery();
                         //Se obtiene el valor del parámetro de salida
-                        bool tieneLuz = (bool)tieneLuzParam.Value;
+                        string tieneLuz = (string)tieneLuzParam.Value;
                         connection.Close();
-                        if(tieneLuz)
-                        {
-                            return "Si tienes luz";
-                        }
-                        else
-                        {
-                            return "No tienes luz";
-                        }
+                        return tieneLuz;
                     }
                     catch (Exception ex) { 
                         Console.WriteLine(ex.Message);
-                        return "No se pudo encontrar ninguna información relacionada a la estación ingresada";
+                        return "Error inesperado...";
                     }
                 }
                     
@@ -151,6 +178,30 @@ namespace servidorConsola
 
                 return subestaciones;
             } //fin busquedaEstacion
+
+            //Metodo de busqueda de horario por estacion
+            string busquedaHorario(string estacion)
+            {
+                SqlConnection connection = new SqlConnection("Data Source=localhost\\SQLEXPRESS;Initial Catalog=ProgramacionCortesDeLuz;Integrated Security=True;");
+                using (connection)
+                {
+                    connection.Open();
+                    Console.WriteLine("Buscando en la base de datos...");
+                    SqlCommand cmd = new SqlCommand("ObtenerHorariosCorte", connection);
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue ("@Estacion", estacion);
+                    SqlParameter horariosParam = new SqlParameter("@HorariosCorte", SqlDbType.VarChar, 255)
+                    {
+                        Direction = ParameterDirection.Output
+                    };
+                    cmd.Parameters.Add (horariosParam);
+                    cmd.ExecuteNonQuery();
+                    string horarios = (string)horariosParam.Value;
+                    connection.Close ();
+                    return horarios;
+                }
+                
+            }
             
         }
     }
