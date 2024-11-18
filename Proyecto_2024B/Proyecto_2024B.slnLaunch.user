@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Nuevo perfil",
+    "Projects": [
+      {
+        "Name": "servidorConsola\\servidorConsola.csproj",
+        "Action": "Start"
+      },
+      {
+        "Name": "clienteInterfaz\\clienteInterfaz.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

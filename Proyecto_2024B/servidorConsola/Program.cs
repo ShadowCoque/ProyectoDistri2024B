@@ -91,7 +91,7 @@ namespace servidorConsola
             string tengoLuz(TimeSpan horaCliente, string estacion)
             {
                 // Conexión a la base de datos
-                SqlConnection connection = new SqlConnection("Data Source=localhost\\SQLEXPRESS;Initial Catalog=ProgramacionCortesDeLuz;Integrated Security=True;");
+                SqlConnection connection = new SqlConnection("Data Source=ASUS-VIVOBOOK\\SQLEXPRESS;Initial Catalog=Proyecto_1_Distribuidas;Integrated Security=True;");
                 using (connection)
                 {
                     try
@@ -133,7 +133,7 @@ namespace servidorConsola
             List<string> busquedaEstacion(string sector)
             {
                 // Conexión a la base de datos
-                SqlConnection connection = new SqlConnection("Data Source=localhost\\SQLEXPRESS;Initial Catalog=ProgramacionCortesDeLuz;Integrated Security=True;");
+                SqlConnection connection = new SqlConnection("Data Source=ASUS-VIVOBOOK\\SQLEXPRESS;Initial Catalog=Proyecto_1_Distribuidas;Integrated Security=True;");
                 List<string> subestaciones = new List<string>(); // Lista para almacenar los resultados
                 using (connection)
                 {
@@ -182,7 +182,7 @@ namespace servidorConsola
             //Metodo de busqueda de horario por estacion
             string busquedaHorario(string estacion)
             {
-                SqlConnection connection = new SqlConnection("Data Source=localhost\\SQLEXPRESS;Initial Catalog=ProgramacionCortesDeLuz;Integrated Security=True;");
+                SqlConnection connection = new SqlConnection("Data Source=ASUS-VIVOBOOK\\SQLEXPRESS;Initial Catalog=Proyecto_1_Distribuidas;Integrated Security=True;");
                 using (connection)
                 {
                     connection.Open();
