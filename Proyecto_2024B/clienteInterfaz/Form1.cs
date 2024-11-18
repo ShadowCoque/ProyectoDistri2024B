@@ -33,6 +33,8 @@ namespace clienteInterfaz
             lblHorario.Text = "";
             lblInd.Text = "";
 
+            btnInicio.BackColor = Color.Orange;
+
         }
 
         private void flpLogo_Paint(object sender, PaintEventArgs e)
@@ -69,6 +71,12 @@ namespace clienteInterfaz
         private void btnInicio_Click(object sender, EventArgs e)
         {
             flpContenido.BringToFront();
+
+            // Cambiar color cuando se elige esta opcion
+            btnInicio.BackColor = Color.Orange;
+            btnConsulta.BackColor = SystemColors.Highlight;
+            btnBusqueda.BackColor = SystemColors.Highlight;
+            btnTengoLuz.BackColor = SystemColors.Highlight;
         }
 
         private void flpLogo_Click(object sender, EventArgs e)
@@ -91,11 +99,23 @@ namespace clienteInterfaz
             pnlBusqueda.SendToBack();
             pnlTengoLuz.SendToBack();
             pnlConsulta.BringToFront();
+
+            // Cambiar color cuando se elige esta opcion
+            btnInicio.BackColor = SystemColors.Highlight;
+            btnConsulta.BackColor = Color.Orange;
+            btnBusqueda.BackColor = SystemColors.Highlight;
+            btnTengoLuz.BackColor = SystemColors.Highlight;
         }
 
         private void btnBusqueda_Click(object sender, EventArgs e)
         {
             pnlBusqueda.BringToFront();
+
+            // Cambiar color cuando se elige esta opcion
+            btnInicio.BackColor = SystemColors.Highlight;
+            btnConsulta.BackColor = SystemColors.Highlight;
+            btnBusqueda.BackColor = Color.Orange;
+            btnTengoLuz.BackColor = SystemColors.Highlight;
         }
 
         private void btnTengoLuz_Click(object sender, EventArgs e)
@@ -103,6 +123,12 @@ namespace clienteInterfaz
             pnlBusqueda.SendToBack();
             pnlBusqueda.SendToBack();
             pnlTengoLuz.BringToFront();
+
+            // Cambiar color cuando se elige esta opcion
+            btnInicio.BackColor = SystemColors.Highlight;
+            btnConsulta.BackColor = SystemColors.Highlight;
+            btnBusqueda.BackColor = SystemColors.Highlight;
+            btnTengoLuz.BackColor = Color.Orange;
         }
 
         //Para busqueda de horario por estacion
